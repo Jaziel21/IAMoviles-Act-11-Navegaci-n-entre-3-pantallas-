@@ -7,9 +7,7 @@ class PaginaDos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Segunda Página AJMG 1194',
-            style: TextStyle(color: Colors.white)), // Changed to white for contrast
-        backgroundColor: Colors.green,
+        title: const Text('Segunda Página AJMG 1194'),
       ),
       body: Center(
         child: Column(
@@ -43,8 +41,6 @@ class PaginaDos extends StatelessWidget {
             ),
             const SizedBox(height: 40),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green, foregroundColor: Colors.white),
               onPressed: () => Navigator.pushNamed(context, '/tercera'),
               child: const Text('Ir a la tercera parte'),
             ),

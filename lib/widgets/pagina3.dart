@@ -7,9 +7,7 @@ class PaginaTres extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tercera Parte AJMG 1194',
-            style: TextStyle(color: Colors.white)), // Changed to white for contrast
-        backgroundColor: const Color(0xFF000080), // Azul Marino
+        title: const Text('Tercera Parte AJMG 1194'),
       ),
       body: Center(
         child: Column(
@@ -19,21 +17,19 @@ class PaginaTres extends StatelessWidget {
               width: 200,
               height: 200,
               decoration: BoxDecoration(
-                color: Colors.lightBlueAccent,
+                color: Theme.of(context).colorScheme.primaryContainer,
                 borderRadius: BorderRadius.circular(15),
                 boxShadow: const <BoxShadow>[
                   BoxShadow(color: Colors.black26, blurRadius: 10, offset: Offset(0, 5))
                 ],
               ),
-              child: const Center(
+              child: Center(
                 child: Text('200 x 200',
-                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                    style: TextStyle(color: Theme.of(context).colorScheme.onPrimaryContainer, fontWeight: FontWeight.bold)),
               ),
             ),
             const SizedBox(height: 30),
             ElevatedButton.icon(
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF000080), foregroundColor: Colors.white),
               onPressed: () => Navigator.pushNamedAndRemoveUntil(context, '/', (Route<dynamic> route) => false),
               icon: const Icon(Icons.home),
               label: const Text('Volver al Inicio'),
